@@ -5,7 +5,8 @@ Wykorzystanie asynchronicznego JavaScript oraz korzystanie z REST API.
 
 ## Zespół
 
-- Mateusz Binięda
+Uczestnik: Mateusz Binięda
+
 
 <!-- Wszystko poniżej tej linijki będzie skasowane -->
 
