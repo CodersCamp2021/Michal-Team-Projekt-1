@@ -6,11 +6,9 @@
       "name": "Human",
       "designation": "sentient",
       "created": "2014-12-10T13:52:11.567Z",
-      "eye_colors":
-        "brown, blue, green, hazel, grey, amber",
+      "eye_colors": "brown, blue, green, hazel, grey, amber",
       "people": [66, 67, 68, 74],
-      "skin_colors":
-        "caucasian, black, asian, hispanic",
+      "skin_colors": "caucasian, black, asian, hispanic",
       "language": "Galactic Basic",
       "hair_colors": "blonde, brown, black, red",
       "homeworld": 9,
@@ -46,8 +44,7 @@
       "name": "Wookie",
       "designation": "sentient",
       "created": "2014-12-10T16:44:31.486Z",
-      "eye_colors":
-        "blue, green, yellow, brown, golden, red",
+      "eye_colors": "blue, green, yellow, brown, golden, red",
       "people": [13, 80],
       "skin_colors": "gray",
       "language": "Shyriiwook",
@@ -277,8 +274,7 @@
       "created": "2014-12-20T09:48:02.406Z",
       "eye_colors": "blue, brown, orange, pink",
       "people": [45, 46],
-      "skin_colors":
-        "orange, yellow, blue, green, pink, purple, tan",
+      "skin_colors": "orange, yellow, blue, green, pink, purple, tan",
       "language": "Twi'leki",
       "hair_colors": "none",
       "homeworld": 37,
@@ -411,8 +407,7 @@
       "created": "2014-12-20T10:26:59.894Z",
       "eye_colors": "brown, orange",
       "people": [44, 54],
-      "skin_colors":
-        "pale, brown, red, orange, yellow",
+      "skin_colors": "pale, brown, red, orange, yellow",
       "language": "Zabraki",
       "hair_colors": "black",
       "homeworld": 45,
@@ -543,8 +538,7 @@
       "name": "Mirialan",
       "designation": "sentient",
       "created": "2014-12-20T16:46:48.290Z",
-      "eye_colors":
-        "blue, green, red, yellow, brown, orange",
+      "eye_colors": "blue, green, red, yellow, brown, orange",
       "people": [64, 65],
       "skin_colors": "yellow, green",
       "language": "Mirialan",
@@ -658,11 +652,9 @@
       "name": "Togruta",
       "designation": "sentient",
       "created": "2014-12-20T18:44:03.246Z",
-      "eye_colors":
-        "red, orange, yellow, green, blue, black",
+      "eye_colors": "red, orange, yellow, green, blue, black",
       "people": [78],
-      "skin_colors":
-        "red, white, orange, yellow, green, blue",
+      "skin_colors": "red, white, orange, yellow, green, blue",
       "language": "Togruti",
       "hair_colors": "none",
       "homeworld": 58,

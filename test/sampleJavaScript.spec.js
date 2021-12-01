@@ -1,16 +1,10 @@
+import { App } from '../src/app/App';
+import { jest } from '@jest/globals';
+
 describe('JavaScript sample test', () => {
-
-  describe("given sample", () => {
-
-    describe("when sample", () => {
-
-      it("then sample", () => {
-        expect(true).toBeTruthy()
-      })
-
-    });
-
+  it('works', () => {
+    const spy = jest.spyOn(console, 'log');
+    App({});
+    expect(spy).toHaveBeenCalledWith('Działa!');
   });
-
-
 });

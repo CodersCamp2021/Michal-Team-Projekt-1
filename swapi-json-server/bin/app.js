@@ -1,3 +1,3 @@
 #!/usr/bin/env node
 
-require("../app.js")
+require('../app.js');
