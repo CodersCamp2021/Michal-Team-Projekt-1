@@ -5,6 +5,8 @@ Wykorzystanie asynchronicznego JavaScript oraz korzystanie z REST API.
 
 ## Zespół
 
+- Mentor: Michał Miszczyszyn
+
 <!-- Wszystko poniżej tej linijki będzie skasowane -->
 
 ![Star Wars Quiz - Ekrany](./.github/images/StarWarsQuizEkrany.png)
