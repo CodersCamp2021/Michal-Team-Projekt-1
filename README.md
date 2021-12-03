@@ -5,6 +5,8 @@ Wykorzystanie asynchronicznego JavaScript oraz korzystanie z REST API.
 
 ## Zespół
 
+Uczestnik: Weronika Burzyńska
+
 <!-- Wszystko poniżej tej linijki będzie skasowane -->
 
 ![Star Wars Quiz - Ekrany](./.github/images/StarWarsQuizEkrany.png)
