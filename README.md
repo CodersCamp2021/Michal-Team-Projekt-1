@@ -5,7 +5,10 @@ Wykorzystanie asynchronicznego JavaScript oraz korzystanie z REST API.
 
 ## Zespół
 
-Uczestnik: Weronika Burzyńska
+- Mentor: Michał Miszczyszyn
+- Uczestniczka: Justyna Bodurka
+- Uczestniczka: Weronika Burzyńska
+- Uczestnik: Krystian Gaczyński
 
 <!-- Wszystko poniżej tej linijki będzie skasowane -->
 
