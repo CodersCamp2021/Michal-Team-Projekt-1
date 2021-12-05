@@ -5,7 +5,9 @@ Wykorzystanie asynchronicznego JavaScript oraz korzystanie z REST API.
 
 ## Zespół
 
-- Uczestnik: Justyna Bodurka
+- Mentor: Michał Miszczyszyn
+- Uczestniczka: Justyna Bodurka
+- Uczestnik: Krystian Gaczyński
 
 <!-- Wszystko poniżej tej linijki będzie skasowane -->
 
