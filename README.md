@@ -6,6 +6,7 @@ Wykorzystanie asynchronicznego JavaScript oraz korzystanie z REST API.
 ## Zespół
 
 - Mentor: Michał Miszczyszyn
+- Uczestnik: Krystian Gaczyński
 
 <!-- Wszystko poniżej tej linijki będzie skasowane -->
 
