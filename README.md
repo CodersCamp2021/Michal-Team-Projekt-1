@@ -7,6 +7,7 @@ Wykorzystanie asynchronicznego JavaScript oraz korzystanie z REST API.
 
 - Mentor: Michał Miszczyszyn
 - Uczestniczka: Justyna Bodurka
+- Uczestniczka: Weronika Burzyńska
 - Uczestnik: Krystian Gaczyński
 
 <!-- Wszystko poniżej tej linijki będzie skasowane -->
