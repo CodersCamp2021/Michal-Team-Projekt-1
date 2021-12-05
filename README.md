@@ -5,8 +5,12 @@ Wykorzystanie asynchronicznego JavaScript oraz korzystanie z REST API.
 
 ## Zespół
 
-Uczestnik: Mateusz Binięda
-
+- Mentor: Michał Miszczyszyn
+- Uczestnik: Mateusz Binięda
+- Uczestniczka: Justyna Bodurka
+- Uczestniczka: Weronika Burzyńska
+- Uczestnik: Krystian Gaczyński
+- Uczestnik: Karol Wolski
 
 <!-- Wszystko poniżej tej linijki będzie skasowane -->
 
