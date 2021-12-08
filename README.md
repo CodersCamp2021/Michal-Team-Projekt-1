@@ -11,6 +11,7 @@ Wykorzystanie asynchronicznego JavaScript oraz korzystanie z REST API.
 - Uczestniczka: Weronika Burzyńska
 - Uczestnik: Krystian Gaczyński
 - Uczestnik: Karol Wolski
+- Uczestnik:  Kamil Kantorski
 
 <!-- Wszystko poniżej tej linijki będzie skasowane -->
 
