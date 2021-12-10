@@ -5,22 +5,21 @@
   "scripts": {
     "dev": "parcel",
     "build": "parcel build",
-    "test": "NODE_OPTIONS=--experimental-vm-modules jest",
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest",
     "postinstall": "husky install"
   },
-  "dependencies": {},
   "devDependencies": {
     "@testing-library/dom": "8.11.1",
     "@testing-library/jest-dom": "5.15.1",
     "@testing-library/user-event": "13.5.0",
     "cross-env": "7.0.3",
     "husky": "7.0.4",
-    "jest-fetch-mock": "3.0.3",
     "jest": "27.4.3",
+    "jest-fetch-mock": "3.0.3",
     "lint-staged": "12.1.2",
     "msw": "0.35.0",
-    "parcel-reporter-static-files-copy": "1.3.4",
     "parcel": "2.0.1",
+    "parcel-reporter-static-files-copy": "1.3.4",
     "prettier": "2.5.0",
     "rimraf": "3.0.2"
   },
@@ -38,10 +37,10 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "yarn prettier --write"
+      "npx prettier --write"
     ],
     "*.{json,md,yaml,yml,scss,css}": [
-      "yarn prettier --write"
+      "npx prettier --write"
     ]
   }
 }
