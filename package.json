@@ -3,7 +3,7 @@
   "source": "src/index.html",
   "type": "module",
   "scripts": {
-    "dev": "parcel",
+    "dev": "parcel src/index.html",
     "build": "parcel build",
     "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest",
     "postinstall": "husky install"
