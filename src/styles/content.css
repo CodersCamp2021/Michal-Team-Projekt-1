@@ -1,0 +1,76 @@
+.content {
+  margin: 2rem 1rem;
+}
+
+.content__header {
+  background-color: var(--color-white);
+  box-shadow: inset -2px -3px 55px -8px rgba(53, 63, 179, 1);
+  border-radius: var(--primary-border-radius);
+  font-weight: bold;
+  padding: 2rem 0;
+  font-size: 2rem;
+  width: 100%;
+  text-align: center;
+  margin: 0 0 2rem;
+}
+
+.content__section {
+  background-color: var(--color-white);
+  box-shadow: inset -2px -3px 55px -8px rgba(53, 63, 179, 1);
+  border-radius: var(--primary-border-radius);
+  padding: 1rem 3rem;
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+}
+
+.content-rules__title {
+  text-align: center;
+}
+
+.content-rules__title::before {
+  content: '';
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+  background: url('../../static/assets/ui/icon-shool.svg');
+  background-size: cover;
+}
+
+.photo__container {
+  margin: 1rem 0 2rem;
+  text-align: center;
+}
+
+.photo__container img {
+  max-width: 100%;
+  border-radius: var(--primary-border-radius);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(4px 4px 40px rgba(255, 0, 0, 0.9));
+}
+
+.content__buttons button {
+  margin: 1.5rem 0;
+}
+
+@media (min-width: 768px) {
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .content__buttons {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-gap: 1rem;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .photo__container {
+    margin: 0 2rem;
+  }
+
+  .content__section {
+    min-height: 342px;
+  }
+}
