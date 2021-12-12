@@ -1,5 +1,9 @@
 /* Nav-Bar */
 
+.logo-starwars {
+  text-align: center;
+}
+
 .logo-starwars img {
   max-width: 100%;
 }
@@ -7,22 +11,21 @@
 .navbar {
   display: grid;
   grid-template-rows: 1fr;
+  margin: 0 1rem;
 }
 
 .mode-list {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 10px;
-  list-style: none;
-  margin: 0 12px;
   width: 100%;
+  padding: 1rem;
+  list-style: none;
   background-color: var(--nav-background-color);
   box-shadow: inset -2px -3px 55px -8px rgba(53, 63, 179, 1);
   text-transform: uppercase;
   border-radius: var(--primary-border-radius);
   font-weight: bold;
-  text-align: center;
 }
 
 .mode-list a:hover {
@@ -39,9 +42,12 @@
 @media only screen and (max-width: 768px) {
   /* Media-Navbar tablets */
 
-  .logo-starwars {
-    display: flex;
-    justify-content: center;
+  .navbar {
+    margin: 0;
+  }
+
+  .mode-list {
+    gap: 1em;
   }
 }
 
@@ -56,18 +62,10 @@
 
   .mode-list {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     justify-items: center;
-    justify-self: flex-end;
     align-self: center;
-    gap: 15px;
     height: 150px;
-    margin: 30px;
-  }
-
-  .mode-list li {
-    display: grid;
-    justify-content: space-around;
-    font-size: 1.2em;
+    font-size: 1.6em;
   }
 }
