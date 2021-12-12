@@ -1,62 +1,62 @@
 <!DOCTYPE html>
 <html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CodersCamp2021 | Star Wars API QUIZ</title>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CodersCamp2021 | Star Wars API QUIZ</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;600&family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
 
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;600&family=Varela+Round&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="styles/main.css" />
-</head>
-
-<body>
-  <nav class="navbar">
-    <div class="logo-starwars" id="logo">
-      <a href="./index.html"><img src="../static/assets/ui/StarWarsLogo.png" alt="Star Wars Logo" id="logo" /></a>
-    </div>
-
-    <ul class="mode-list">
-      <a class="people-btn" href="xD">
-        <li>PEOPLE</li>
-      </a>
-      <a class="vehicles-btn" href="haha">
-        <li>VEHICLES</li>
-      </a>
-      <a class="starships-btn" href="hehe">
-        <li>STARSHIPS</li>
-      </a>
-    </ul>
-  </nav>
-
-  <main>
-    <div class="content">
-      <div class="photo__container">
-        <img class="content__picture" src="../static/assets/img/modes/people/1.jpg" alt=" zdjęcie postaci" />
+  <body>
+    <nav class="navbar">
+      <div class="logo-starwars">
+        <a href="./index.html"><img src="../static/assets/ui/StarWarsLogo.png" alt="Star Wars Logo" id="logo" /></a>
       </div>
 
-      <div class="content__container">
-        <h1 class="content__header">MODE: Who is this character?</h1>
-        <div class="content__section">
-          <h2 class="content-rules__title">Mode Rules</h2>
-          <p class="content-rules__description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ullam odio sequi veritatis consectetur,
-            tempora placeat voluptatibus similique aspernatur dolores non soluta consequatur dolor voluptatem distinctio
-            nihil dolorem repudiandae debitis?
-          </p>
+      <ul class="mode-list">
+        <a class="mode-btn" href="xD">
+          <li>PEOPLE</li>
+        </a>
+        <a class="mode-btn" href="haha">
+          <li>VEHICLES</li>
+        </a>
+        <a class="mode-btn" href="hehe">
+          <li>STARSHIPS</li>
+        </a>
+      </ul>
+    </nav>
+
+    <main>
+      <div class="content">
+        <div class="photo__container">
+          <img class="content__picture" src="../static/assets/img/modes/people/1.jpg" alt=" zdjęcie postaci" />
+        </div>
+
+        <div class="content__container">
+          <h1 class="content__header">MODE: Who is this character?</h1>
+          <div class="content__section">
+            <h2 class="content-rules__title">Mode Rules</h2>
+            <p class="content-rules__description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ullam odio sequi veritatis consectetur,
+              tempora placeat voluptatibus similique aspernatur dolores non soluta consequatur dolor voluptatem
+              distinctio nihil dolorem repudiandae debitis?
+            </p>
+          </div>
+        </div>
+
+        <div class="content__buttons">
+          <button class="button">Settings</button>
+          <button class="button"><img src="../static/assets/ui/icon-stats.svg" /> Hall of fame</button>
+          <button class="button button--action">Play the game</button>
         </div>
       </div>
+    </main>
 
-      <div class="content__buttons">
-        <button class="button">Settings</button>
-        <button class="button"> <img src="../static/assets/ui/icon-stats.svg" /> Hall of fame</button>
-        <button class="button button--action">Play the game</button>
-      </div>
-    </div>
-  </main>
-
-  <script src="index.js" type="module"></script>
-</body>
-
+    <script src="index.js" type="module"></script>
+  </body>
 </html>
