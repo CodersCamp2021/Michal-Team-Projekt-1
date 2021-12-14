@@ -1,0 +1,253 @@
+:root {
+  --base-font-size: 1.8rem;
+}
+
+.result-wrapper {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 0.2fr 0.4fr 0.6fr 0.6fr;
+  grid-template-areas:
+    'rs rs rs'
+    'rtc rtc rtc'
+    'rtc rtc rtc'
+    'rf rf rf';
+  align-items: center;
+  padding: 1rem;
+  grid-row-gap: 0.2rem;
+}
+
+.result-summary {
+  grid-area: rs;
+  margin: 0.5rem 0 1.4rem 0;
+}
+
+.result-summary h2 {
+  font-weight: 600;
+  font-size: calc(var(--base-font-size) / 1.5);
+  text-align: center;
+}
+
+.result-summary p,
+.result-form p {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: calc(var(--base-font-size) / 2);
+}
+.result-table-row > * {
+  font-size: calc(var(--base-font-size) / 2);
+}
+.result-master-yoda {
+  grid-area: rmy;
+  display: none;
+}
+
+.result-master-yoda img {
+  width: 100%;
+  max-height: 280px;
+  object-fit: contain;
+}
+
+.result-table-content {
+  grid-area: rtc;
+}
+
+.result-table-rows {
+  height: 15em;
+  overflow-y: scroll;
+}
+
+.result-form {
+  grid-area: rf;
+}
+
+.flex-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.player-name-hall-of-fame {
+  width: 100%;
+  padding: 12px 20px;
+}
+
+.result-table-row {
+  display: flex;
+  gap: 5%;
+  justify-content: center;
+  align-items: center;
+}
+
+.result-table-row > div {
+  flex-basis: 20.5%;
+  display: inline-block;
+}
+
+.result-table-header {
+  border-bottom: 1px solid #c4c4c4;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.modal-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fff;
+  padding: 1rem;
+  width: 100%;
+  max-width: 75rem;
+  box-shadow: 0 4px 4px rgb(0 0 0 / 25%), 4px 4px 40px rgb(255 0 0 / 90%);
+  border-radius: 16px;
+}
+
+.modal-btn {
+  text-transform: uppercase;
+  font-size: calc(var(--base-font-size) / 1.8);
+}
+
+.modal-btns-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.result-table-row img {
+  max-height: 90px;
+  object-fit: contain;
+  border-radius: 16px;
+}
+
+.close {
+  position: absolute;
+  right: 32px;
+  top: 22px;
+  width: 8px;
+  height: 8px;
+  opacity: 0.3;
+}
+
+.close:hover {
+  opacity: 1;
+}
+
+.close:before,
+.close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 20px;
+  width: 1px;
+  background-color: #333;
+}
+
+.close:before {
+  transform: rotate(45deg);
+}
+
+.close:after {
+  transform: rotate(-45deg);
+}
+
+#close-hall-of-fame-button {
+  display: none;
+}
+
+@media (min-width: 675px) {
+  .modal-content {
+    width: 60%;
+    max-width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    padding: 1.2em;
+  }
+
+  .modal-btn {
+    font-size: calc(var(--base-font-size) / 1.5);
+    flex-basis: 48%;
+  }
+
+  .result-summary p {
+    line-height: 34px;
+  }
+}
+
+@media (min-width: 890px) {
+  .result-summary h2 {
+    font-size: var(--base-font-size);
+  }
+
+  .result-summary p,
+  .result-table-row,
+  .result-form p {
+    font-size: calc(var(--base-font-size) / 1.5);
+  }
+
+  .player-name-hall-of-fame {
+    min-width: 400px;
+  }
+
+  .modal-btns-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .close {
+    display: none;
+  }
+
+  #close-hall-of-fame-button {
+    display: block;
+  }
+}
+
+@media (min-width: 1167px) {
+  .result-master-yoda {
+    display: block;
+  }
+  .result-form p {
+    padding-left: 0;
+    font-size: var(--base-font-size);
+  }
+
+  .result-wrapper {
+    grid-template-areas:
+      'rs rs rs'
+      'rmy rtc rtc'
+      'rmy rtc rtc'
+      'rf rf rf';
+  }
+
+  .flex-form {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .flex-form > * {
+    flex-basis: 48%;
+  }
+
+  .result-form p {
+    padding-left: 1rem;
+  }
+}
