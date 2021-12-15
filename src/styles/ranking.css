@@ -1,0 +1,21 @@
+.ranking {
+  font-family: Montserrat, 'sans-serif';
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 640px) {
+  .ranking {
+    font-size: 1.6rem;
+  }
+}
+
+.ranking__head,
+.ranking__item {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+.ranking__head {
+  font-weight: 700;
+}
