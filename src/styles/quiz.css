@@ -1,0 +1,75 @@
+.quiz {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    'photo'
+    'question'
+    'answers';
+  gap: 2rem;
+}
+
+.quiz-answer-container {
+  place-self: center center;
+  width: 100%;
+  grid-area: answers;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.quiz-answer {
+  padding: 2rem;
+  background-color: var(--color-white);
+  box-shadow: inset -2px -3px 55px -8px rgba(53, 63, 179, 1);
+  border-radius: var(--primary-border-radius);
+  font-size: 1.6rem;
+}
+
+.quiz-question {
+  grid-area: question;
+  place-self: center center;
+  background-color: var(--color-white);
+  box-shadow: inset -2px -3px 55px -8px rgba(53, 63, 179, 1);
+  border-radius: var(--primary-border-radius);
+  font-weight: bold;
+  padding: 2rem 0;
+  font-size: 2rem;
+  width: 100%;
+  text-align: center;
+}
+
+.quiz-photo {
+  grid-area: photo;
+  justify-self: center;
+  width: 100%;
+  min-width: 100px;
+  max-width: 300px;
+  border-radius: var(--primary-border-radius);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(4px 4px 40px rgba(255, 0, 0, 0.9));
+}
+
+@media (min-width: 568px) {
+  .quiz {
+    grid-template: auto 1fr / repeat(2, minmax(0, 1fr));
+    grid-template-areas:
+      'question question'
+      'photo answers'
+      'photo answers';
+  }
+  .quiz-answer-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .quiz {
+    grid-template: auto 1fr 1fr / repeat(3, minmax(0, 1fr));
+    grid-template-areas:
+      'photo question question'
+      'photo answers answers'
+      'photo answers answers';
+  }
+  .quiz-answer-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
