@@ -1,3 +1,71 @@
-body {
-  font-family: 'Fira Sans', sans-serif;
+/* Nav-Bar */
+
+.logo-starwars {
+  text-align: center;
+}
+
+.logo-starwars img {
+  max-width: 100%;
+}
+
+.navbar {
+  display: grid;
+  grid-template-rows: 1fr;
+  margin: 0 1rem;
+}
+
+.mode-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  list-style: none;
+  background-color: var(--nav-background-color);
+  box-shadow: inset -2px -3px 55px -8px rgba(53, 63, 179, 1);
+  text-transform: uppercase;
+  border-radius: var(--primary-border-radius);
+  font-weight: bold;
+}
+
+.mode-list a:hover {
+  border-bottom: 3px solid white;
+}
+
+.mode-btn {
+  text-decoration: none;
+  color: black;
+}
+
+/* MEDIA */
+
+@media only screen and (max-width: 768px) {
+  /* Media-Navbar tablets */
+
+  .navbar {
+    margin: 0;
+  }
+
+  .mode-list {
+    gap: 1em;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /* Media Navbar Desktop */
+
+  .navbar {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+  }
+
+  .mode-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-self: center;
+    height: 150px;
+    font-size: 1.6em;
+  }
 }

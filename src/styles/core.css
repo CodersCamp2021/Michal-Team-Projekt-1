@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: url('../../static/assets/ui/QuizBackground.png') no-repeat center center / cover fixed;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+/* BUTTONS */
+
+.button {
+  display: block;
+  width: 100%;
+
+  border-radius: var(--primary-border-radius);
+  padding: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  offset: 0px, 4px rgba(0, 0, 0, 0.25);
+}
+
+.button img {
+  width: 2rem;
+  height: 2rem;
+  padding-top: 5px;
+}
+
+.button:hover {
+  border-bottom: 3px solid black;
+}
+
+.button--action {
+  background-color: #ff0000cc;
+  color: #ffffff;
+}
