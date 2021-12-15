@@ -39,9 +39,11 @@
 
         <div class="content__container">
           <h1 class="content__header">MODE: Who is this character?</h1>
-          <div class="content__section">
-            <h2 class="content-rules__title">Mode Rules</h2>
-            <p class="content-rules__description">
+          <div id="content-section" class="content-section">
+            <h2 class="content-section__title">
+              <img src="../static/assets/ui/icon-shool.svg" class="content-section__title-icon" alt="" /> Mode Rules
+            </h2>
+            <p class="content-section__description">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ullam odio sequi veritatis consectetur,
               tempora placeat voluptatibus similique aspernatur dolores non soluta consequatur dolor voluptatem
               distinctio nihil dolorem repudiandae debitis?
@@ -56,6 +58,7 @@
         </div>
       </div>
     </main>
+
     <!-- modal game result -->
     <div class="modal-overlay">
       <div class="modal-content">
@@ -137,6 +140,22 @@
         </div>
       </div>
     </div>
+
+    <template id="ranking-template">
+      <h2 class="content-section__title">
+        <img src="../static/assets//ui/icon-stats.svg" class="content-section__title-icon" alt="" />
+        Mode Ranking
+      </h2>
+      <div class="ranking">
+        <div class="ranking__head">
+          <div>Place</div>
+          <div>Player</div>
+          <div>Answered</div>
+        </div>
+        <div class="ranking__body"></div>
+      </div>
+    </template>
+
     <script src="index.js" type="module"></script>
   </body>
 </html>
