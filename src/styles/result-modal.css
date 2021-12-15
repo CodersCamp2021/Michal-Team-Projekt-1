@@ -1,7 +1,3 @@
-:root {
-  --base-font-size: 1.8rem;
-}
-
 .result-wrapper {
   width: 100%;
   height: 100%;
@@ -9,21 +5,22 @@
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 0.2fr 0.4fr 0.6fr 0.6fr;
   grid-template-areas:
-    'rs rs rs'
-    'rtc rtc rtc'
-    'rtc rtc rtc'
-    'rf rf rf';
+    'result-summary result-summary result-summary'
+    'result-table-content result-table-content result-table-content'
+    'result-table-content result-table-content result-table-content'
+    'result-form result-form result-form';
   align-items: center;
   padding: 1rem;
   grid-row-gap: 0.2rem;
 }
 
 .result-summary {
-  grid-area: rs;
+  grid-area: result-summary;
   margin: 0.5rem 0 1.4rem 0;
 }
 
 .result-summary h2 {
+  text-transform: uppercase;
   font-weight: 600;
   font-size: calc(var(--base-font-size) / 1.5);
   text-align: center;
@@ -31,14 +28,16 @@
 
 .result-summary p,
 .result-form p {
-  font-family: Montserrat;
+  font-family: Montserrat, 'sans-serif';
   font-style: normal;
   font-weight: 500;
   font-size: calc(var(--base-font-size) / 2);
 }
+
 .result-table-row > * {
   font-size: calc(var(--base-font-size) / 2);
 }
+
 .result-master-yoda {
   grid-area: rmy;
   display: none;
@@ -51,7 +50,7 @@
 }
 
 .result-table-content {
-  grid-area: rtc;
+  grid-area: result-table-content;
 }
 
 .result-table-rows {
@@ -60,7 +59,7 @@
 }
 
 .result-form {
-  grid-area: rf;
+  grid-area: result-form;
 }
 
 .flex-form {
@@ -113,7 +112,7 @@
 
 .modal-content {
   position: relative;
-  background-color: #fff;
+  background-color: var(--color-white);
   padding: 1rem;
   width: 100%;
   max-width: 75rem;
@@ -138,6 +137,9 @@
 }
 
 .close {
+  background: transparent;
+  box-shadow: 0px 0px 0px transparent;
+  border: 0px solid transparent;
   position: absolute;
   right: 32px;
   top: 22px;
@@ -168,7 +170,7 @@
   transform: rotate(-45deg);
 }
 
-#close-hall-of-fame-button {
+.close-modal-btn {
   display: none;
 }
 
@@ -215,7 +217,7 @@
     display: none;
   }
 
-  #close-hall-of-fame-button {
+  .close-modal-btn {
     display: block;
   }
 }
@@ -226,15 +228,14 @@
   }
   .result-form p {
     padding-left: 0;
-    font-size: var(--base-font-size);
   }
 
   .result-wrapper {
     grid-template-areas:
-      'rs rs rs'
-      'rmy rtc rtc'
-      'rmy rtc rtc'
-      'rf rf rf';
+      'result-summary result-summary result-summary'
+      'rmy result-table-content result-table-content'
+      'rmy result-table-content result-table-content'
+      'result-form result-form result-form';
   }
 
   .flex-form {
