@@ -14,7 +14,7 @@
   margin: 0 0 2rem;
 }
 
-.content-section {
+.content__section {
   background-color: var(--color-white);
   box-shadow: inset -2px -3px 55px -8px rgba(53, 63, 179, 1);
   border-radius: var(--primary-border-radius);
@@ -23,13 +23,13 @@
   line-height: 2.5rem;
 }
 
-.content-section__title {
+.content__section__title {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.content-section__title-icon {
+.content__section__title-icon {
   margin-right: 1rem;
 }
 
@@ -66,7 +66,7 @@
     margin: 0 2rem;
   }
 
-  .content-section {
+  .content_section {
     min-height: 342px;
   }
 }
