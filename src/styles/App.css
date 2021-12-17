@@ -28,13 +28,19 @@
   font-weight: bold;
 }
 
-.mode-list a:hover {
+/* .mode-list :hover {
   border-bottom: 3px solid white;
-}
+} */
 
 .mode-btn {
   text-decoration: none;
   color: black;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.mode-btn:hover {
+  border-bottom: 3px solid white;
 }
 
 /* MEDIA */
