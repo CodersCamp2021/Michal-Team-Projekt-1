@@ -8,5 +8,7 @@
 /* Modules */
 @import './App.css'; /* refactor */
 @import './content.css';
-@import 'result-modal.css';
-@import 'counter-timer.css';
+@import './counter-timer.css';
+@import './result-modal.css';
+@import './ranking.css';
+
