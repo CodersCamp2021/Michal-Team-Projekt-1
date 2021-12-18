@@ -1,5 +1,5 @@
-import initializeActionButtons from './actionButtons';
+import { actionButtons } from './actionButtons';
 
 export const App = ({ options }) => {
-  initializeActionButtons();
+  actionButtons();
 };
