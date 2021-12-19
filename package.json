@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "parcel src/index.html",
     "build": "parcel build",
-    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --watch",
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest",
     "postinstall": "husky install"
   },
   "devDependencies": {
@@ -31,8 +31,7 @@
     ],
     "testRegex": "(spec|test)[.](js|ts)",
     "setupFiles": [
-      "./test/setupJest.js",
-      "./test/setEnvVars.js"
+      "./test/setupJest.js"
     ],
     "transform": {}
   },

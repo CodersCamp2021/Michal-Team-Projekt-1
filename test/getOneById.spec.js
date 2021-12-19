@@ -1,7 +1,7 @@
 import { jest } from '@jest/globals';
 import { getOneById } from '../src/app/api/starwarsApi';
 
-const mockUrl = process.env.SW_JSON_SERVER_URL;
+const mockUrl = process.env.SW_API_BASE_URL;
 const response = {
   edited: '2014-12-20T21:17:50.311Z',
   name: 'R2-D2',
