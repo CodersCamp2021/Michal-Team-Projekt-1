@@ -1,28 +1,20 @@
-const counterTimer = () => {
-  const blade = document.querySelector('.sword-blade');
+const showTimer = (time) => {
   const timer = document.querySelector('.timer');
-  const modal = document.querySelector('.modal-overlay');
-  let time = 0;
-  let seconds = 59;
-  let minutes = 1;
+  const blade = document.querySelector('.sword-blade');
+  timer.textContent = `Time left: ${time.getMinutes()}m ${time.getSeconds()}s`;
+  blade.value = 120 - Math.floor(time.getTime() / 1000);
+};
+
+const counterTimer = () => {
+  // Current time + 2 minutes
+  const time = new Date(Date.parse(new Date()) + 121 * 1000);
   const countTime = setInterval(() => {
-    blade.value = time;
-    if (seconds === 0) {
-      timer.textContent = `${minutes}m 0${seconds}s`;
-      minutes--;
-      seconds = 59;
-    } else if (time === 120) {
+    const timeLeft = new Date(time - new Date());
+    if (timeLeft.getTime() < 1000) {
       clearInterval(countTime);
-      timer.textContent = `2m 00s`;
-      blade.value = 0;
+      const modal = document.querySelector('.modal-shadow');
       modal.classList.add('active');
-    } else if (seconds < 10) {
-      timer.textContent = `${minutes}m 0${seconds}s`;
-      seconds--;
-    } else {
-      timer.textContent = `${minutes}m ${seconds}s`;
-      seconds--;
     }
-    time++;
+    showTimer(timeLeft);
   }, 1000);
 };
