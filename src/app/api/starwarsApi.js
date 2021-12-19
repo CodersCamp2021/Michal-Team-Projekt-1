@@ -1,4 +1,4 @@
-const base_url = process.env.SW_JSON_SERVER_URL;
+const base_url = process.env.SW_API_BASE_URL;
 
 export const getOneById = (mode, id) => {
   return fetch(`${base_url}/${mode}/${id}`)

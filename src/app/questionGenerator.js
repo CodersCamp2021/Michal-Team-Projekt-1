@@ -17,7 +17,15 @@ export const generateQuestion = async (mode) => {
   const modeIdsArray = getModeIds(mode);
   const answersIds = generateRandomIds(modeIdsArray);
   const rightAnswerId = generateRandomId(answersIds);
-  const answers = await Promise.all(answersIds.map((questionId) => getOneById(mode, questionId)));
+  const answers = await Promise.all(
+    answersIds.map(async (id) => {
+      const answersData = await getOneById(mode, id);
+      return {
+        id,
+        ...answersData,
+      };
+    }),
+  );
   const rightAnswer = answers.find((answer) => answer.id === rightAnswerId);
   const answerImgPath = `static/assets/img/modes/${mode}/${rightAnswerId}.jpg`;
 
