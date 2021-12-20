@@ -72,9 +72,9 @@
     </main>
 
     <!-- modal game result -->
-    <div class="modal-overlay">
+    <div class="modal-overlay active">
       <div class="modal-content">
-        <button type="button" class="close"></button>
+        <button type="button" class="close" aria-label="close"></button>
         <div class="result-wrapper">
           <div class="result-summary">
             <h2>game over</h2>
@@ -87,66 +87,67 @@
           <div class="result-master-yoda">
             <img class="master-yoda-img" src="../static/assets/ui/MasterYodaLeft.png" alt="Master Yoda" />
           </div>
-          <div class="result-table-content">
-            <div class="result-table-header result-table-row">
-              <div></div>
-              <div>You</div>
-              <div>Computer</div>
-              <div>Answer</div>
-            </div>
-            <div class="result-table-rows">
-              <div class="result-table-row">
-                <div>
+          <table class="result-table-content">
+            <thead>
+              <tr class="result-table-row result-table-header">
+                <th></th>
+                <th>You</th>
+                <th>Computer</th>
+                <th>Answer</th>
+              </tr>
+            </thead>
+            <tbody class="result-table-rows">
+              <tr class="result-table-row">
+                <td>
                   <img src="../static/assets/img/modes/people/1.jpg" alt="sw-people-1" />
-                </div>
-                <div>Mas Amedda</div>
-                <div>Mas Amedda</div>
-                <div>Mas Amedda</div>
-              </div>
-              <div class="result-table-row">
-                <div>
+                </td>
+                <td>Mas Amedda</td>
+                <td>Mas Amedda</td>
+                <td>Mas Amedda</td>
+              </tr>
+              <tr class="result-table-row">
+                <td>
+                  <img src="../static/assets/img/modes/people/1.jpg" alt="sw-people-1" />
+                </td>
+                <td>Mas Amedda</td>
+                <td>Mas Amedda</td>
+                <td>Mas Amedda</td>
+              </tr>
+              <tr class="result-table-row">
+                <td>
+                  <img src="../static/assets/img/modes/people/1.jpg" alt="sw-people-1" />
+                </td>
+                <td>Mas Amedda</td>
+                <td>Mas Amedda</td>
+                <td>Mas Amedda</td>
+              </tr>
+              <tr class="result-table-row">
+                <td>
                   <img src="../static/assets/img/modes/people/2.jpg" alt="sw-people-2" />
-                </div>
-                <div>Mas Amedda</div>
-                <div>Mas Amedda</div>
-                <div>Mas Amedda</div>
-              </div>
-              <div class="result-table-row">
-                <div>
-                  <img src="../static/assets/img/modes/people/5.jpg" alt="sw-people-5" />
-                </div>
-                <div>Mas Amedda</div>
-                <div>Mas Amedda</div>
-                <div>Mas Amedda</div>
-              </div>
-              <div class="result-table-row">
-                <div>
-                  <img src="../static/assets/img/modes/people/3.jpg" alt="sw-people-3" />
-                </div>
-                <div>Mas Amedda</div>
-                <div>Mas Amedda</div>
-                <div>Mas Amedda</div>
-              </div>
-            </div>
-          </div>
+                </td>
+                <td>Mas Amedda</td>
+                <td>Mas Amedda</td>
+                <td>Mas Amedda</td>
+              </tr>
+            </tbody>
+          </table>
           <div class="result-form">
             <form id="form-hall-of-fame-save">
               <div class="flex-form">
-                <label for="player-name-hall-of-fame">
                   <input
                     id="player-name-hall-of-fame"
                     name="player-name-hall-of-fame"
                     class="player-name-hall-of-fame"
                     type="text"
+                    aria-label="player-name"
                   />
-                </label>
                 <p>Please fill your name in order to receive eternal glory in the whole Galaxy!</p>
               </div>
               <div class="modal-btns-wrapper">
-                <button type="submit" class="button modal-btn button--action" id="save-hall-of-fame-button">
+                <button type="submit" class="button modal-btn button--action" id="save-hall-of-fame-button"  aria-label="submit">
                   may the force be with you
                 </button>
-                <button type="button" class="button modal-btn close-modal-btn" id="close-hall-of-fame-button">
+                <button type="button" class="button modal-btn close-modal-btn" id="close-hall-of-fame-button"  aria-label="close">
                   close
                 </button>
               </div>
