@@ -1,10 +1,10 @@
-import { App } from '../src/app/App';
-import { jest } from '@jest/globals';
+// import { App } from '../src/app/App';
+// import { jest } from '@jest/globals';
+// import { actionButtons } from '../src/app/actionButtons';
 
-describe('JavaScript sample test', () => {
-  it('works', () => {
-    const spy = jest.spyOn(console, 'log');
-    App({});
-    expect(spy).toHaveBeenCalledWith('Działa!');
-  });
+// jest.mock('../src/app/actionButtons');
+
+test('should call actionButtons import', () => {
+  // App({});
+  // expect(actionButtons).toHaveBeenCalled();
 });

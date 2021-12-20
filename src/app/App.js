@@ -1,3 +1,5 @@
+import { actionButtons } from './actionButtons';
+
 export const App = ({ options }) => {
-  console.log('Działa!');
+  actionButtons();
 };
