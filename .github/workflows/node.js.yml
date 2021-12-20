@@ -26,6 +26,21 @@ jobs:
             ${{ runner.os }}-node-
 
       - run: npm ci
+
+      # prettier
+      - name: Running Prettier
+        id: prettier-run
+        shell: bash
+        run: echo "::set-output name=prettier-output::$(npx prettier --list-different src)"
+      - name: Fail On Prettier Error
+        id: fail-on-error
+        if: steps.prettier-run.outputs.prettier-output != 0 && steps.prettier-run.outputs.prettier-output != ''
+        shell: bash
+        run: |
+          echo "The following files are not formatted:"
+          echo "${{steps.prettier-run.outputs.prettier_output}}"
+          exit 1
+
       - run: npm test
       - run: npm run build
 
