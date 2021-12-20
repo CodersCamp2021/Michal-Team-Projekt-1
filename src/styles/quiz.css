@@ -1,0 +1,115 @@
+.quiz {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    'photo'
+    'question'
+    'answers';
+  gap: 2rem;
+  margin: 2rem;
+}
+
+.quiz-answer-container {
+  place-self: center center;
+  width: 100%;
+  grid-area: answers;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.quiz-answer {
+  padding: 1.5rem;
+  background-color: var(--color-white);
+  box-shadow: inset 0px 0px 55px -8px rgba(53, 63, 179, 1);
+  border-radius: var(--primary-border-radius);
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: box-shadow 300ms;
+}
+
+.quiz-answer:hover {
+  box-shadow: inset 0px 0px 85px -8px rgb(53, 179, 74);
+}
+
+.quiz-question {
+  grid-area: question;
+  place-self: center center;
+  background-color: var(--color-white);
+  box-shadow: inset 0px 0px 55px -8px rgba(53, 63, 179, 1);
+  border-radius: var(--primary-border-radius);
+  font-weight: bold;
+  padding: 1.5rem 0;
+  font-size: 1.6rem;
+  width: 100%;
+  text-align: center;
+}
+
+.quiz-photo {
+  grid-area: photo;
+  justify-self: center;
+  width: 100%;
+  min-width: 6rem;
+  max-width: 19rem;
+  border-radius: var(--primary-border-radius);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(4px 4px 40px rgba(255, 0, 0, 0.9));
+}
+
+@media (min-width: 650px) {
+  .quiz {
+    grid-template: auto 1fr / repeat(2, minmax(0, 1fr));
+    grid-template-areas:
+      'question question'
+      'photo answers'
+      'photo answers';
+    gap: 3rem;
+  }
+  .quiz-question {
+    font-size: 1.8rem;
+    padding: 2rem 0;
+  }
+  .quiz-answer-container {
+    grid-template-columns: 1fr;
+  }
+  .quiz-answer {
+    font-size: 1.4rem;
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .quiz {
+    grid-template: auto 1fr 1fr / repeat(3, minmax(0, 1fr));
+    grid-template-areas:
+      'photo question question'
+      'photo answers answers'
+      'photo answers answers';
+    gap: 4rem;
+  }
+  .quiz-question {
+    font-size: 2rem;
+  }
+  .quiz-answer-container {
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 4rem;
+  }
+  .quiz-answer {
+    font-size: 1.6rem;
+    padding: 2rem;
+  }
+  .quiz-photo {
+    max-width: 28rem;
+  }
+}
+
+@media (min-width: 1850px) {
+  .quiz-answer-container,
+  .quiz-question {
+    max-width: 70rem;
+    justify-self: center;
+  }
+  .quiz-photo {
+    margin-left: 5rem;
+  }
+}
