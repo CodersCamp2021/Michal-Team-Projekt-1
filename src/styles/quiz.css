@@ -1,5 +1,6 @@
 .quiz {
   display: grid;
+  display: none;
   grid-template-columns: 1fr;
   grid-template-areas:
     'photo'

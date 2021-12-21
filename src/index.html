@@ -1,170 +1,166 @@
 <!DOCTYPE html>
 <html lang="pl">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CodersCamp2021 | Star Wars API QUIZ</title>
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;600&family=Varela+Round&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles/main.css" />
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CodersCamp2021 | Star Wars API QUIZ</title>
 
-  <body>
-    <nav class="navbar">
-      <div class="logo-starwars">
-        <a href="./index.html"><img src="../static/assets/ui/StarWarsLogo.png" alt="Star Wars Logo" id="logo" /></a>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;600&family=Varela+Round&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="logo-starwars">
+      <a href="./index.html"><img src="../static/assets/ui/StarWarsLogo.png" alt="Star Wars Logo" id="logo" /></a>
+    </div>
+
+    <div class="mode-list">
+      <button class="mode-btn mode-btn--people">PEOPLE</button>
+      <button class="mode-btn mode-btn--vehicles">VEHICLES</button>
+      <button class="mode-btn mode-btn--starships">STARSHIPS</button>
+    </div>
+  </nav>
+
+  <main>
+    <div class="content">
+      <div class="photo__container">
+        <img class="content__picture" src="../static/assets/img/modes/people/36.jpg" alt=" zdjęcie postaci" />
       </div>
 
-      <div class="mode-list">
-        <button class="mode-btn mode-btn--people">PEOPLE</button>
-        <button class="mode-btn mode-btn--vehicles">VEHICLES</button>
-        <button class="mode-btn mode-btn--starships">STARSHIPS</button>
-      </div>
-    </nav>
+      <div id="content__container" class="content__container">
+        <h1 class="content__header">MODE: Who is this character?</h1>
 
-    <main>
-      <div class="content" style="display: none">
-        <div class="photo__container">
-          <img class="content__picture" src="../static/assets/img/modes/people/36.jpg" alt=" zdjęcie postaci" />
-        </div>
-
-        <div id="content__container" class="content__container">
-          <h1 class="content__header">MODE: Who is this character?</h1>
-
-          <div id="content-section" class="content__section">
-            <h2 class="content__section__title">
-              <img src="../static/assets/ui/icon-shool.svg" class="content__section__title-icon" alt="" /> Mode Rules
-            </h2>
-            <p class="content__section__description">
-              You have two minutes (2m) to answer as many questions as possible. During the game on each question you
-              need to select who from Star Wars is showed on the left (Jar Jar Binks right now) from available options.
-            </p>
-          </div>
-        </div>
-
-        <div class="content__buttons">
-          <button class="button">Settings</button>
-          <button class="button button--ranking"><img src="../static/assets/ui/icon-stats.svg" /> Hall of fame</button>
-          <button class="button button--action">Play the game</button>
-        </div>
-
-        <!-- quiz section -->
-        <div class="quiz">
-          <img class="quiz-photo" src="../static/assets/img/modes/people/1.jpg" alt=" zdjęcie postaci" />
-          <h1 class="quiz-question">Who is this character?</h1>
-          <div class="quiz-answer-container">
-            <button class="quiz-answer">Answer 1</button>
-            <button class="quiz-answer">Answer 2</button>
-            <button class="quiz-answer">Answer 3</button>
-            <button class="quiz-answer">Answer 4</button>
-          </div>
+        <div id="content-section" class="content__section">
+          <h2 class="content__section__title">
+            <img src="../static/assets/ui/icon-shool.svg" class="content__section__title-icon" alt="" /> Mode Rules
+          </h2>
+          <p class="content__section__description">
+            You have two minutes (2m) to answer as many questions as possible. During the game on each question you
+            need to select who from Star Wars is showed on the left (Jar Jar Binks right now) from available options.
+          </p>
         </div>
       </div>
-    </main>
 
-    <!-- modal game result -->
-    <div class="modal-overlay">
-      <div class="modal-content">
-        <button type="button" class="close"></button>
-        <div class="result-wrapper">
-          <div class="result-summary">
-            <h2>game over</h2>
-            <p id="result-summary-text" class="sub-title">
-              The force is strong in you young Padawan! During 2 minutes you have answered
-              <span id="result-summary-player-points">X / Y </span> questions. And Computer guessed
-              <span id="result-summary-computer-points">X / Y</span>
-            </p>
-          </div>
-          <div class="result-master-yoda">
-            <img class="master-yoda-img" src="../static/assets/ui/MasterYodaLeft.png" alt="Master Yoda" />
-          </div>
-          <div class="result-table-content">
-            <div class="result-table-header result-table-row">
-              <div></div>
-              <div>You</div>
-              <div>Computer</div>
-              <div>Answer</div>
-            </div>
-            <div class="result-table-rows">
-              <div class="result-table-row">
-                <div>
-                  <img src="../static/assets/img/modes/people/1.jpg" alt="sw-people-1" />
-                </div>
-                <div>Mas Amedda</div>
-                <div>Mas Amedda</div>
-                <div>Mas Amedda</div>
-              </div>
-              <div class="result-table-row">
-                <div>
-                  <img src="../static/assets/img/modes/people/2.jpg" alt="sw-people-2" />
-                </div>
-                <div>Mas Amedda</div>
-                <div>Mas Amedda</div>
-                <div>Mas Amedda</div>
-              </div>
-              <div class="result-table-row">
-                <div>
-                  <img src="../static/assets/img/modes/people/5.jpg" alt="sw-people-5" />
-                </div>
-                <div>Mas Amedda</div>
-                <div>Mas Amedda</div>
-                <div>Mas Amedda</div>
-              </div>
-              <div class="result-table-row">
-                <div>
-                  <img src="../static/assets/img/modes/people/3.jpg" alt="sw-people-3" />
-                </div>
-                <div>Mas Amedda</div>
-                <div>Mas Amedda</div>
-                <div>Mas Amedda</div>
-              </div>
-            </div>
-          </div>
-          <div class="result-form">
-            <form id="form-hall-of-fame-save">
-              <div class="flex-form">
-                <label for="player-name-hall-of-fame">
-                  <input
-                    id="player-name-hall-of-fame"
-                    name="player-name-hall-of-fame"
-                    class="player-name-hall-of-fame"
-                    type="text"
-                  />
-                </label>
-                <p>Please fill your name in order to receive eternal glory in the whole Galaxy!</p>
-              </div>
-              <div class="modal-btns-wrapper">
-                <button type="submit" class="button modal-btn button--action" id="save-hall-of-fame-button">
-                  may the force be with you
-                </button>
-                <button type="button" class="button modal-btn close-modal-btn" id="close-hall-of-fame-button">
-                  close
-                </button>
-              </div>
-            </form>
-          </div>
+      <div class="content__buttons">
+        <button class="button">Settings</button>
+        <button class="button button--ranking"><img src="../static/assets/ui/icon-stats.svg" /> Hall of fame</button>
+        <button class="button button--action">Play the game</button>
+      </div>
+
+      <!-- quiz section -->
+      <div class="quiz">
+        <img class="quiz-photo" src="../static/assets/img/modes/people/1.jpg" alt=" zdjęcie postaci" />
+        <h1 class="quiz-question">Who is this character?</h1>
+        <div class="quiz-answer-container">
+          <button class="quiz-answer">Answer 1</button>
+          <button class="quiz-answer">Answer 2</button>
+          <button class="quiz-answer">Answer 3</button>
+          <button class="quiz-answer">Answer 4</button>
         </div>
       </div>
     </div>
+  </main>
 
-    <template id="ranking-template">
-      <h2 class="content__section__title">
-        <img src="../static/assets//ui/icon-stats.svg" class="content__section__title-icon" alt="" />
-        Mode Ranking
-      </h2>
-      <div class="ranking ranking--open">
-        <div class="ranking__head">
-          <div>Place</div>
-          <div>Player</div>
-          <div>Answered</div>
+  <!-- modal game result -->
+  <div class="modal-overlay">
+    <div class="modal-content">
+      <button type="button" class="close"></button>
+      <div class="result-wrapper">
+        <div class="result-summary">
+          <h2>game over</h2>
+          <p id="result-summary-text" class="sub-title">
+            The force is strong in you young Padawan! During 2 minutes you have answered
+            <span id="result-summary-player-points">X / Y </span> questions. And Computer guessed
+            <span id="result-summary-computer-points">X / Y</span>
+          </p>
         </div>
-        <div class="ranking__body"></div>
+        <div class="result-master-yoda">
+          <img class="master-yoda-img" src="../static/assets/ui/MasterYodaLeft.png" alt="Master Yoda" />
+        </div>
+        <div class="result-table-content">
+          <div class="result-table-header result-table-row">
+            <div></div>
+            <div>You</div>
+            <div>Computer</div>
+            <div>Answer</div>
+          </div>
+          <div class="result-table-rows">
+            <div class="result-table-row">
+              <div>
+                <img src="../static/assets/img/modes/people/1.jpg" alt="sw-people-1" />
+              </div>
+              <div>Mas Amedda</div>
+              <div>Mas Amedda</div>
+              <div>Mas Amedda</div>
+            </div>
+            <div class="result-table-row">
+              <div>
+                <img src="../static/assets/img/modes/people/2.jpg" alt="sw-people-2" />
+              </div>
+              <div>Mas Amedda</div>
+              <div>Mas Amedda</div>
+              <div>Mas Amedda</div>
+            </div>
+            <div class="result-table-row">
+              <div>
+                <img src="../static/assets/img/modes/people/5.jpg" alt="sw-people-5" />
+              </div>
+              <div>Mas Amedda</div>
+              <div>Mas Amedda</div>
+              <div>Mas Amedda</div>
+            </div>
+            <div class="result-table-row">
+              <div>
+                <img src="../static/assets/img/modes/people/3.jpg" alt="sw-people-3" />
+              </div>
+              <div>Mas Amedda</div>
+              <div>Mas Amedda</div>
+              <div>Mas Amedda</div>
+            </div>
+          </div>
+        </div>
+        <div class="result-form">
+          <form id="form-hall-of-fame-save">
+            <div class="flex-form">
+              <label for="player-name-hall-of-fame">
+                <input id="player-name-hall-of-fame" name="player-name-hall-of-fame" class="player-name-hall-of-fame"
+                  type="text" />
+              </label>
+              <p>Please fill your name in order to receive eternal glory in the whole Galaxy!</p>
+            </div>
+            <div class="modal-btns-wrapper">
+              <button type="submit" class="button modal-btn button--action" id="save-hall-of-fame-button">
+                may the force be with you
+              </button>
+              <button type="button" class="button modal-btn close-modal-btn" id="close-hall-of-fame-button">
+                close
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
-    </template>
+    </div>
+  </div>
 
-    <script src="index.js" type="module"></script>
-  </body>
+  <template id="ranking-template">
+    <h2 class="content__section__title">
+      <img src="../static/assets//ui/icon-stats.svg" class="content__section__title-icon" alt="" />
+      Mode Ranking
+    </h2>
+    <div class="ranking ranking--open">
+      <div class="ranking__head">
+        <div>Place</div>
+        <div>Player</div>
+        <div>Answered</div>
+      </div>
+      <div class="ranking__body"></div>
+    </div>
+  </template>
+
+  <script src="index.js" type="module"></script>
+</body>
+
 </html>
