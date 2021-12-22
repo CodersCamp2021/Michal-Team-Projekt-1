@@ -1,6 +1,7 @@
 import { createRanking } from './ranking';
 import { rulesView } from './templates/rules.template.js';
 import schoolSvg from '../../static/assets/ui/icon-shool.svg';
+import { nextQuestion } from './nextQuestion';
 
 export const actionButtons = () => {
   const vehiclesButton = document.querySelector('.mode-btn--vehicles');
@@ -8,6 +9,7 @@ export const actionButtons = () => {
   const peopleButton = document.querySelector('.mode-btn--people');
   const starshipsButton = document.querySelector('.mode-btn--starships');
   const rankingButton = document.querySelector('.button--ranking');
+  const playButton = document.querySelector('.button.button--action');
 
   vehiclesButton.addEventListener('click', () => {
     contentContainer.innerHTML = rulesView({
@@ -34,4 +36,5 @@ export const actionButtons = () => {
     });
   });
   rankingButton.addEventListener('click', createRanking);
+  playButton.addEventListener('click', nextQuestion);
 };
