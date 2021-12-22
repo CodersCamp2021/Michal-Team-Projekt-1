@@ -4,6 +4,7 @@ import schoolSvg from '../../static/assets/ui/icon-shool.svg';
 import { generateQuestion } from './questionGenerator.js';
 import { rulesView } from './templates/rules.template.js';
 import { modes } from './constants';
+import { nextQuestion } from './nextQuestion';
 
 export const actionButtons = () => {
   const vehiclesButton = document.querySelector('.mode-btn--vehicles');
@@ -13,7 +14,6 @@ export const actionButtons = () => {
   const starshipsButton = document.querySelector('.mode-btn--starships');
   const rankingButton = document.querySelector('.button--ranking');
   const actionButton = document.querySelector('.button--action');
-  const quizPhoto = document.querySelector('.photo__container img');
 
   actionButton.setAttribute('title', modes.title.people);
   actionButton.setAttribute('mode', 'people');
@@ -51,13 +51,5 @@ export const actionButtons = () => {
   });
 
   rankingButton.addEventListener('click', createRanking);
-
-  actionButton.addEventListener('click', async (event) => {
-    const title = event.target.getAttribute('title');
-    const mode = event.target.getAttribute('mode');
-    const questions = await generateQuestion(mode);
-
-    quizPhoto.src = questions.answerImgPath;
-    contentContainer.innerHTML = quizView(questions.answers, title);
-  });
+  actionButton.addEventListener('click', nextQuestion);
 };
