@@ -1,5 +1,4 @@
-import { rightAnswer } from "../questionGenerator";
-
+import { rightAnswer } from '../questionGenerator';
 
 class HumanPlayer {
   constructor(name) {
@@ -13,7 +12,7 @@ class HumanPlayer {
   get playerInfo() {
     return {
       name: this.name,
-      score: `${this.score}/${this.askedQuestion}`
+      score: `${this.score}/${this.askedQuestion}`,
     };
   }
 
@@ -22,10 +21,8 @@ class HumanPlayer {
     this.activeQuestion = question;
     callback.forEach((callback) => {
       callback(question);
-    }); 
+    });
   }
-
-  
 
   answerQuestion(answer, callback) {
     this.answer.push(answer);
