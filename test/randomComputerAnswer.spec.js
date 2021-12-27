@@ -81,7 +81,7 @@ describe('randomComputerAnswer', () => {
       },
     ];
 
-    const randomAnswerFn = randomComputerAnswer(mockAnswers);
-    expect(mockAnswers).toContainEqual(randomAnswerFn);
+    const randomAnswer = randomComputerAnswer(mockAnswers);
+    expect(mockAnswers).toContainEqual(randomAnswer);
   });
 });
