@@ -26,7 +26,7 @@
     </nav>
 
     <main>
-      <div class="content" style="display: none">
+      <div class="content">
         <div class="photo__container">
           <img class="content__picture" src="../static/assets/img/modes/people/36.jpg" alt=" zdjęcie postaci" />
         </div>
@@ -36,7 +36,8 @@
 
           <div id="content-section" class="content__section">
             <h2 class="content__section__title">
-              <img src="../static/assets/ui/icon-shool.svg" class="content__section__title-icon" alt="" /> Mode Rules
+              <img src="../static/assets/ui/icon-shool.svg" class="content__section__title-icon" alt="" />
+              Mode Rules
             </h2>
             <p class="content__section__description">
               You have two minutes (2m) to answer as many questions as possible. During the game on each question you
@@ -49,18 +50,6 @@
           <button class="button">Settings</button>
           <button class="button button--ranking"><img src="../static/assets/ui/icon-stats.svg" /> Hall of fame</button>
           <button class="button button--action">Play the game</button>
-        </div>
-
-        <!-- quiz section -->
-        <div class="quiz">
-          <img class="quiz-photo" src="../static/assets/img/modes/people/1.jpg" alt=" zdjęcie postaci" />
-          <h1 class="quiz-question">Who is this character?</h1>
-          <div class="quiz-answer-container">
-            <button class="quiz-answer">Answer 1</button>
-            <button class="quiz-answer">Answer 2</button>
-            <button class="quiz-answer">Answer 3</button>
-            <button class="quiz-answer">Answer 4</button>
-          </div>
         </div>
       </div>
     </main>
@@ -161,20 +150,6 @@
       </div>
     </div>
 
-    <template id="ranking-template">
-      <h2 class="content__section__title">
-        <img src="../static/assets//ui/icon-stats.svg" class="content__section__title-icon" alt="" />
-        Mode Ranking
-      </h2>
-      <div class="ranking ranking--open">
-        <div class="ranking__head">
-          <div>Place</div>
-          <div>Player</div>
-          <div>Answered</div>
-        </div>
-        <div class="ranking__body"></div>
-      </div>
-    </template>
     <script src="index.js" type="module"></script>
   </body>
 </html>
