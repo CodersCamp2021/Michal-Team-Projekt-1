@@ -4,8 +4,10 @@ import { QUESTION_TEXT } from './constants';
 import { mode } from './App';
 
 const checkAnswer = (e) => {
-  console.log(`Is the answer correct? ${e.target.dataset.correct}`);
-  nextQuestion();
+  const correct = e.target.dataset.correct === 'true';
+  e.target.classList.add(correct ? 'quiz-answer-correct' : 'quiz-answer-wrong');
+  // TODO: call HumanPlayer.answerQuestion()
+  setTimeout(nextQuestion, 1000);
 };
 
 export const nextQuestion = () => {
