@@ -9,5 +9,5 @@
 @import './App.css'; /* refactor */
 @import './content.css';
 @import './quiz.css';
-@import './result-modal.css';
+@import 'results-modal.css';
 @import './ranking.css';
