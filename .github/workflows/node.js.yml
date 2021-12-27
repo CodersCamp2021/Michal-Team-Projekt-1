@@ -26,6 +26,12 @@ jobs:
             ${{ runner.os }}-node-
 
       - run: npm ci
+
+      # prettier
+      - name: Running Prettier
+        id: prettier-run
+        run: npx prettier --check src
+
       - run: npm test
       - run: npm run build
 

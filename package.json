@@ -16,6 +16,7 @@
     "husky": "7.0.4",
     "jest": "27.4.3",
     "jest-fetch-mock": "3.0.3",
+    "jest-transform-stub": "^2.0.0",
     "lint-staged": "12.1.2",
     "msw": "0.35.0",
     "parcel": "2.0.1",
@@ -33,7 +34,9 @@
     "setupFiles": [
       "./test/setupJest.js"
     ],
-    "transform": {}
+    "transform": {
+      ".+\\.(svg|css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub"
+    }
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
