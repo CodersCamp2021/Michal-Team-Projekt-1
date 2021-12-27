@@ -1,11 +1,15 @@
 import { RANKING_PLACES } from './constants';
 import { getRanking } from './localStorageRanking';
+import { rankingView } from './templates/ranking.template';
+import statsSvg from '../../static/assets/ui/icon-stats.svg';
 
 const getThreeHighestResults = (ranking) => {
   return (ranking ?? []).sort((a, b) => b.score / b.maxScore - a.score / a.maxScore).slice(0, 3);
 };
 
 const renderRankingArray = (rankingArray) => {
+  if (!rankingArray.length) return `Leaderboard is empty`;
+
   return rankingArray
     .map(({ player, score, maxScore }, i) => {
       return `
@@ -21,12 +25,10 @@ const renderRankingArray = (rankingArray) => {
 
 export const createRanking = (mode) => {
   const container = document.querySelector('#content-section');
-  const template = document.querySelector('#ranking-template');
-  const ranking = template.content.cloneNode(true);
   const rankingArray = getThreeHighestResults(getRanking(mode));
-  const rankingBody = ranking.querySelector('.ranking__body');
-
-  rankingBody.innerHTML = renderRankingArray(rankingArray);
-  container.innerHTML = '';
-  container.append(ranking);
+  container.innerHTML = rankingView({
+    title: 'Ranking mode',
+    imageSrc: statsSvg,
+    ranking: renderRankingArray(rankingArray),
+  });
 };
