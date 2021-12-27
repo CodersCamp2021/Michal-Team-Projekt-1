@@ -11,6 +11,23 @@ const checkAnswer = (e) => {
 };
 
 export const nextQuestion = () => {
+  const enterKeyframes = [
+    { transform: 'translateX(-10%) scale(0.9)', opacity: '0' },
+    { transform: 'translateX(0) scale(1)', opacity: '1' },
+  ];
+  const leaveKeyframes = [
+    { transform: 'translateX(0) scale(1)', opacity: '1' },
+    { transform: 'translateX(10%) scale(0.9)', opacity: '0' },
+  ];
+  const animationOptions = {
+    duration: 400,
+    easing: 'ease-in-out',
+  };
+
+  if (document.querySelector('.quiz')) {
+    document.querySelector('.quiz').animate(leaveKeyframes, animationOptions);
+  }
+
   generateQuestion(mode).then((answersData) => {
     const question = QUESTION_TEXT[mode];
     const answers = answersData.answers.map((answersDataItem) => ({
@@ -19,6 +36,7 @@ export const nextQuestion = () => {
     }));
     const photo = answersData.answerImgPath;
     document.querySelector('main').innerHTML = quizView({ question, answers, photo });
+    document.querySelector('.quiz').animate(enterKeyframes, animationOptions);
     document.querySelectorAll('button.quiz-answer').forEach((button) => button.addEventListener('click', checkAnswer));
   });
 };
