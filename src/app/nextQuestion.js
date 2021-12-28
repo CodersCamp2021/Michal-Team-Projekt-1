@@ -1,7 +1,6 @@
 import { quizView } from './templates/quiz.template';
 import { generateQuestion } from './questionGenerator';
-import { QUESTION_TEXT } from './constants';
-import { mode } from './App';
+import { mode } from './mode';
 
 const checkAnswer = (e) => {
   const correct = e.target.dataset.correct === 'true';
@@ -22,14 +21,15 @@ export const nextQuestion = () => {
   const animationOptions = {
     duration: 400,
     easing: 'ease-in-out',
+    fill: 'both',
   };
 
   if (document.querySelector('.quiz')) {
     document.querySelector('.quiz').animate(leaveKeyframes, animationOptions);
   }
 
-  generateQuestion(mode).then((answersData) => {
-    const question = QUESTION_TEXT[mode];
+  generateQuestion().then((answersData) => {
+    const question = mode.getQuestion();
     const answers = answersData.answers.map((answersDataItem) => ({
       text: answersDataItem.name,
       correct: answersDataItem.id === answersData.rightAnswer.id,
