@@ -1,4 +1,4 @@
-import { createRanking } from './ranking';
+import { createRanking } from './ranking.js';
 import { quizView } from './templates/quiz.template.js';
 import schoolSvg from '../../static/assets/ui/icon-shool.svg';
 import { generateQuestion } from './questionGenerator.js';
@@ -54,7 +54,8 @@ export const actionButtons = () => {
 
   actionButton.addEventListener('click', async (event) => {
     const title = event.target.getAttribute('title');
-    const questions = await generateQuestion('starships');
+    const mode = event.target.getAttribute('mode');
+    const questions = await generateQuestion(mode);
 
     quizPhoto.src = questions.answerImgPath;
     contentContainer.innerHTML = quizView(questions.answers, title);
