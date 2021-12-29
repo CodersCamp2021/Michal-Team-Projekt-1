@@ -1,5 +1,4 @@
-import { actionButtons } from './actionButtons';
-
+import { mode } from './mode';
 export const App = ({ options }) => {
-  actionButtons();
+  mode.setMode('people');
 };
