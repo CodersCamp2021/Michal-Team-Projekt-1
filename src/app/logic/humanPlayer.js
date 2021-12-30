@@ -1,5 +1,3 @@
-import { rightAnswer } from '../questionGenerator';
-
 class HumanPlayer {
   constructor(name) {
     this.name = name;
@@ -16,27 +14,19 @@ class HumanPlayer {
     };
   }
 
-  askQuestion(question, callback) {
+  askQuestion(question) {
     this.askedQuestion++;
     this.activeQuestion = question;
-    callback.forEach((callback) => {
-      callback(question);
-    });
   }
 
-  answerQuestion(answer, callback) {
+  answerQuestion(answer, correct) {
     this.answer.push(answer);
-    if (rightAnswer(this.activeQuestion.rightAnswer, answer)) {
+    if (correct) {
       this.score++;
     }
-    callback.forEach((callback) => {
-      callback(this.activeQuestion, answer);
-    });
   }
 }
 
-function createNewPlayer(name) {
+export function createNewPlayer(name) {
   return new HumanPlayer(name);
 }
-
-export default createNewPlayer;
