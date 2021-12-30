@@ -5,7 +5,7 @@ import { createNewPlayer } from './logic/humanPlayer';
 
 const player = createNewPlayer('player');
 
-export const checkAnswer = (e) => {
+const checkAnswer = (e) => {
   const correct = e.target.dataset.correct === 'true';
   e.target.classList.add(correct ? 'quiz-answer-correct' : 'quiz-answer-wrong');
   player.answerQuestion(e.target.innerHTML, correct);
