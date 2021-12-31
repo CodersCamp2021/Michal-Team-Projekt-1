@@ -11,21 +11,21 @@ export const getAllIds = async (mode) => {
     nextPage = next;
     data = [...data, ...results];
   }
-  return data.map((d) => getLastSegment(d.url));
+  return data.map(({ url }) => getLastSegment(url));
 };
 
-const getLastSegment = (url) => {
-  const paths = url.split('/').filter((entry) => entry !== '');
-  const lastPath = paths[paths.length - 1];
-  return lastPath;
-};
+const getLastSegment = (url) =>
+  url
+    .split('/')
+    .filter((entry) => entry)
+    .pop();
 
 const checkDiffArrays = (first, second) => {
-  return first.filter((x) => second.indexOf(x) === -1);
+  return first.filter((x) => !second.includes(x));
 };
 
 /*
-*getAllIds('people').then((ids) => console.log('PEOPLE IDS DIFF:' + checkDiffArrays(PEOPLE_IDS, ids)));
+getAllIds('people').then((ids) => console.log('PEOPLE IDS DIFF:' + checkDiffArrays(PEOPLE_IDS, ids)));
 getAllIds('vehicles').then((ids) => console.log('VEHICLES IDS DIFF:' + checkDiffArrays(VEHICLES_IDS, ids)));
 getAllIds('starships').then((ids) => console.log('STARSHIPS IDS DIFF:' + checkDiffArrays(STARSHIPS_IDS, ids)));
 */
