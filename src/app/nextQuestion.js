@@ -1,11 +1,15 @@
 import { quizView } from './templates/quiz.template';
 import { generateQuestion } from './questionGenerator';
 import { mode } from './mode';
+import { createNewPlayer } from './logic/humanPlayer';
+
+const player = createNewPlayer('player');
 
 const checkAnswer = (e) => {
   const correct = e.target.dataset.correct === 'true';
   e.target.classList.add(correct ? 'quiz-answer-correct' : 'quiz-answer-wrong');
-  // TODO: call HumanPlayer.answerQuestion()
+  player.answerQuestion(e.target.innerHTML, correct);
+  player.askQuestion(e.currentTarget.question);
   setTimeout(nextQuestion, 1000);
 };
 
@@ -37,6 +41,9 @@ export const nextQuestion = () => {
     const photo = answersData.answerImgPath;
     document.querySelector('main').innerHTML = quizView({ question, answers, photo });
     document.querySelector('.quiz').animate(enterKeyframes, animationOptions);
-    document.querySelectorAll('button.quiz-answer').forEach((button) => button.addEventListener('click', checkAnswer));
+    document.querySelectorAll('button.quiz-answer').forEach((button) => {
+      button.addEventListener('click', checkAnswer);
+      button.question = question;
+    });
   });
 };
