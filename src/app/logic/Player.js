@@ -1,4 +1,4 @@
-class HumanPlayer {
+class Player {
   constructor(name) {
     this.name = name;
     this.score = 0;
@@ -28,5 +28,5 @@ class HumanPlayer {
 }
 
 export function createNewPlayer(name) {
-  return new HumanPlayer(name);
+  return new Player(name);
 }

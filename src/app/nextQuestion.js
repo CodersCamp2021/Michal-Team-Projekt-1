@@ -1,16 +1,15 @@
 import { quizView } from './templates/quiz.template';
 import { generateQuestion } from './questionGenerator';
 import { mode } from './mode';
-import { createNewPlayer } from './logic/humanPlayer';
+import { isCorrectAnswer } from './helpers/isCorrectAnswer';
+import { randomComputerAnswer } from './randomComputerAnswer';
+import { computerPlayer, humanPlayer } from './players';
 
-const player = createNewPlayer('player');
-
-const checkAnswer = (e) => {
-  const correct = e.target.dataset.correct === 'true';
-  e.target.classList.add(correct ? 'quiz-answer-correct' : 'quiz-answer-wrong');
-  player.answerQuestion(e.target.innerHTML, correct);
-  player.askQuestion(e.currentTarget.question);
-  setTimeout(nextQuestion, 1000);
+const playerAnswer = (player, answer, rightAnswer, question) => {
+  const isCorrect = isCorrectAnswer(answer, rightAnswer);
+  player.answerQuestion(answer, isCorrect);
+  player.askQuestion(question);
+  return isCorrect;
 };
 
 export const nextQuestion = () => {
@@ -34,15 +33,21 @@ export const nextQuestion = () => {
 
   generateQuestion().then((answersData) => {
     const question = mode.getQuestion();
-    const answers = answersData.answers.map((answersDataItem) => ({
-      text: answersDataItem.name,
-      correct: answersDataItem.id === answersData.rightAnswer.id,
-    }));
-    const photo = answersData.answerImgPath;
-    document.querySelector('main').innerHTML = quizView({ question, answers, photo });
+    const {
+      answers,
+      answerImgPath: photo,
+      rightAnswer: { name: rightAnswer },
+    } = answersData;
+    const answersArray = answers.map(({ name }) => name);
+    document.querySelector('main').innerHTML = quizView({ question, answersArray, photo });
     document.querySelector('.quiz').animate(enterKeyframes, animationOptions);
     document.querySelectorAll('button.quiz-answer').forEach((button) => {
-      button.addEventListener('click', checkAnswer);
+      button.addEventListener('click', (e) => {
+        const isCorrect = playerAnswer(humanPlayer, e.target.innerText, rightAnswer, question);
+        e.target.classList.add(isCorrect ? 'quiz-answer-correct' : 'quiz-answer-wrong');
+        playerAnswer(computerPlayer, randomComputerAnswer(answersArray), rightAnswer, question);
+        setTimeout(nextQuestion, 1000);
+      });
       button.question = question;
     });
   });
