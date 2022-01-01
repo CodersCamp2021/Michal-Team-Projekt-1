@@ -14,6 +14,6 @@ export const actionButtons = () => {
   peopleButton.addEventListener('click', () => mode.setMode('people'));
   starshipsButton.addEventListener('click', () => mode.setMode('starships'));
 
-  rankingButton.addEventListener('click', createRanking);
+  rankingButton.addEventListener('click', () => createRanking(mode.getMode()));
   actionButton.addEventListener('click', nextQuestion);
 };
