@@ -10,7 +10,8 @@ class Player {
   get playerInfo() {
     return {
       name: this.name,
-      score: `${this.score}/${this.askedQuestion}`,
+      score: this.score,
+      maxScore: this.askedQuestion,
     };
   }
 
