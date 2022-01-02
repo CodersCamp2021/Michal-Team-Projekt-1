@@ -4,7 +4,7 @@ class Player {
     this.score = 0;
     this.askedQuestion = 0;
     this.activeQuestion = null;
-    this.answer = [];
+    this.answers = [];
   }
 
   get playerInfo() {
@@ -19,9 +19,9 @@ class Player {
     this.activeQuestion = question;
   }
 
-  answerQuestion(answer, correct) {
-    this.answer.push(answer);
-    if (correct) {
+  answerQuestion(answer, rightAnswer, isCorrect, img) {
+    this.answers.push({ answer, rightAnswer, isCorrect, img });
+    if (isCorrect) {
       this.score++;
     }
   }

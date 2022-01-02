@@ -1,16 +1,22 @@
-export const resultsModalView = ({ playerData, computerData, correctAnswers }) => {
+export const resultsModalView = ({
+  playerData: { playerScore, playerAnswers },
+  computerData: { computerScore, computerAnswers },
+}) => {
   return `<div class="modal-overlay active">
       <div class="modal-content">
         <button type="button" class="close close-modal-btns" aria-label="close" id="close-hall-of-fame-button-2"></button>
         <div class="result-wrapper">
           <div class="result-summary">
             <h2>game over</h2>
-            <p id="result-summary-text" class="sub-title">
+            <p class="result-summary-text" class="sub-title">
               The force is strong in you young Padawan! During 2 minutes you have answered
-              <span id="result-summary-player-points">${playerData.points}/${
-    correctAnswers.length
-  } </span> questions. And Computer guesse
-              <span id="result-summary-computer-points">${computerData.points}/${correctAnswers.length}</span>
+              <span id="result-summary-player-points">
+                ${playerScore}/${playerAnswers.length}
+              </span> questions. And Computer guessed
+              <span id="result-summary-computer-points">
+                ${computerScore}/${computerAnswers.length}
+              </span>
+              questions.
             </p>
           </div>
           <div class="result-master-yoda">
@@ -29,16 +35,20 @@ export const resultsModalView = ({ playerData, computerData, correctAnswers }) =
               </tr>
             </thead>
             <tbody class="result-table-rows">
-              ${correctAnswers
+              ${playerAnswers
                 .map(
-                  (answer, index) => `
+                  ({ answer, img, isCorrect, rightAnswer }, index) => `
               <tr class="result-table-row">
                 <td>
-                  <img src=${answer.image} alt="sw-people-1" />
+                  <img src=${img} alt="sw-img" />
                 </td>
-                <td>${playerData[index].answers}</td>
-                <td>${computerData[index].answers}</td>
-                <td>${answer.text}</td>
+                <td class=${isCorrect ? 'answer-correct' : 'answer-wrong'}>
+                    ${answer}
+                </td>
+                <td class=${computerAnswers[index].isCorrect ? 'answer-correct' : 'answer-wrong'}>
+                    ${computerAnswers[index].answer}
+                </td>
+                <td>${rightAnswer}</td>
                 </tr>
           `,
                 )
