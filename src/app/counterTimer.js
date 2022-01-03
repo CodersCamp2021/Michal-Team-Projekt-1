@@ -4,7 +4,7 @@ const showTimer = (time) => {
   const timer = document.querySelector('.timer');
   const blade = document.querySelector('.sword-blade');
   timer.textContent = `Time left: ${Math.floor(time / 1000 / 60)}m ${Math.floor((time / 1000) % 60)}s`;
-  blade.value = 120 - Math.floor(time / 1000);
+  blade.value = Math.floor(time / 1000);
 };
 
 export const counterTimer = () => {
