@@ -1,3 +1,5 @@
+import { renderResultsModal } from './resultsModal';
+
 const showTimer = (time) => {
   const timer = document.querySelector('.timer');
   const blade = document.querySelector('.sword-blade');
@@ -5,13 +7,14 @@ const showTimer = (time) => {
   blade.value = 120 - Math.floor(time / 1000);
 };
 
-const counterTimer = () => {
+export const counterTimer = () => {
   // Current time + 2 minutes
   const time = Date.now() + 120 * 1000;
   const countTime = setInterval(() => {
     const timeLeft = time - Date.now();
     if (timeLeft < 0) {
       clearInterval(countTime);
+      //TODO: DODAĆ WYŚWIETLANIE MODALA PO ZAKONCZENIU GRY
       const modal = document.querySelector('.modal-shadow');
       modal.classList.add('active');
     }
