@@ -8,7 +8,7 @@ export const resultsModalView = ({
         <div class="result-wrapper">
           <div class="result-summary">
             <h2>game over</h2>
-            <p class="result-summary-text" class="sub-title">
+            <p class="result-summary-text sub-title">
               The force is strong in you young Padawan! During 2 minutes you have answered
               <span id="result-summary-player-points">
                 ${playerScore}/${playerAnswers.length}
