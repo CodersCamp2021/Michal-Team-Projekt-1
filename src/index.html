@@ -53,103 +53,13 @@
         </div>
       </div>
     </main>
-
-    <!-- modal game result -->
-    <div class="modal-overlay">
-      <div class="modal-content">
-        <button type="button" class="close" aria-label="close"></button>
-        <div class="result-wrapper">
-          <div class="result-summary">
-            <h2>game over</h2>
-            <p id="result-summary-text" class="sub-title">
-              The force is strong in you young Padawan! During 2 minutes you have answered
-              <span id="result-summary-player-points">X / Y </span> questions. And Computer guessed
-              <span id="result-summary-computer-points">X / Y</span>
-            </p>
-          </div>
-          <div class="result-master-yoda">
-            <img class="master-yoda-img" src="../static/assets/ui/MasterYodaLeft.png" alt="Master Yoda" />
-          </div>
-          <table class="result-table-content">
-            <thead>
-              <tr class="result-table-row result-table-header">
-                <th></th>
-                <th>You</th>
-                <th>Computer</th>
-                <th>Answer</th>
-              </tr>
-            </thead>
-            <tbody class="result-table-rows">
-              <tr class="result-table-row">
-                <td>
-                  <img src="../static/assets/img/modes/people/1.jpg" alt="sw-people-1" />
-                </td>
-                <td>Mas Amedda</td>
-                <td>Mas Amedda</td>
-                <td>Mas Amedda</td>
-              </tr>
-              <tr class="result-table-row">
-                <td>
-                  <img src="../static/assets/img/modes/people/1.jpg" alt="sw-people-1" />
-                </td>
-                <td>Mas Amedda</td>
-                <td>Mas Amedda</td>
-                <td>Mas Amedda</td>
-              </tr>
-              <tr class="result-table-row">
-                <td>
-                  <img src="../static/assets/img/modes/people/1.jpg" alt="sw-people-1" />
-                </td>
-                <td>Mas Amedda</td>
-                <td>Mas Amedda</td>
-                <td>Mas Amedda</td>
-              </tr>
-              <tr class="result-table-row">
-                <td>
-                  <img src="../static/assets/img/modes/people/2.jpg" alt="sw-people-2" />
-                </td>
-                <td>Mas Amedda</td>
-                <td>Mas Amedda</td>
-                <td>Mas Amedda</td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="result-form">
-            <form id="form-hall-of-fame-save">
-              <div class="flex-form">
-                <input
-                  id="player-name-hall-of-fame"
-                  name="player-name-hall-of-fame"
-                  class="player-name-hall-of-fame"
-                  type="text"
-                  aria-label="player-name"
-                />
-                <p>Please fill your name in order to receive eternal glory in the whole Galaxy!</p>
-              </div>
-              <div class="modal-btns-wrapper">
-                <button
-                  type="submit"
-                  class="button modal-btn button--action"
-                  id="save-hall-of-fame-button"
-                  aria-label="submit"
-                >
-                  may the force be with you
-                </button>
-                <button
-                  type="button"
-                  class="button modal-btn close-modal-btn"
-                  id="close-hall-of-fame-button"
-                  aria-label="close"
-                >
-                  close
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
+    <div class="count-timer">
+      <p class="timer">Time left: <span class="timer-number">2m 00s</span></p>
+      <div class="light-sword">
+        <img src="../static/assets/ui/LightSwordHandle.png" class="sword-handle" alt="light-sword" />
+        <progress class="sword-blade" value="0" max="120"></progress>
       </div>
     </div>
-
     <script src="index.js" type="module"></script>
   </body>
 </html>

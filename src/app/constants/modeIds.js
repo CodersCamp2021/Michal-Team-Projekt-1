@@ -81,11 +81,6 @@ export const PEOPLE_IMAGES = {
   81: new URL('../../../static/assets/img/modes/people/81.jpg', import.meta.url),
   82: new URL('../../../static/assets/img/modes/people/82.jpg', import.meta.url),
   83: new URL('../../../static/assets/img/modes/people/83.jpg', import.meta.url),
-  84: new URL('../../../static/assets/img/modes/people/84.jpg', import.meta.url),
-  85: new URL('../../../static/assets/img/modes/people/85.jpg', import.meta.url),
-  86: new URL('../../../static/assets/img/modes/people/86.jpg', import.meta.url),
-  87: new URL('../../../static/assets/img/modes/people/87.jpg', import.meta.url),
-  88: new URL('../../../static/assets/img/modes/people/88.jpg', import.meta.url),
 };
 
 export const STARSHIPS_IMAGES = {

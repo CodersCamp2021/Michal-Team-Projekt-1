@@ -8,9 +8,10 @@ import {
 } from './constants/modeIds';
 import { getOneById } from './api/starwarsApi';
 import { generateRandomId, generateRandomIds } from './shared/random';
+import { mode } from './mode';
 
-const getModeIds = (mode) => {
-  switch (mode) {
+const getModeIds = () => {
+  switch (mode.getMode()) {
     case 'people':
       return [PEOPLE_IDS, PEOPLE_IMAGES];
     case 'vehicles':
@@ -20,13 +21,13 @@ const getModeIds = (mode) => {
   }
 };
 
-export const generateQuestion = async (mode) => {
-  const [modeIdsArray, modeImages] = getModeIds(mode);
+export const generateQuestion = async () => {
+  const [modeIdsArray, modeImages] = getModeIds();
   const answersIds = generateRandomIds(modeIdsArray);
   const rightAnswerId = generateRandomId(answersIds);
   const answers = await Promise.all(
     answersIds.map(async (id) => {
-      const answersData = await getOneById(mode, id);
+      const answersData = await getOneById(mode.getMode(), id);
       return {
         id,
         ...answersData,

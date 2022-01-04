@@ -1,0 +1,94 @@
+.count-timer {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  max-width: 1200px;
+}
+
+.timer {
+  margin: 0;
+  font-size: 1rem;
+  text-align: center;
+  color: tomato;
+}
+
+.timer span {
+  font-weight: bold;
+}
+
+.light-sword {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.sword-handle {
+  width: 30%;
+}
+
+.sword-blade {
+  position: relative;
+  left: -3.5%;
+  width: 70%;
+  height: 6px;
+  background-color: gray;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.sword-blade::-webkit-progress-bar {
+  background-color: gray;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.sword-blade::-webkit-progress-value {
+  background-color: tomato;
+  border: 1px solid red;
+  box-shadow: 0 0 8px red;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.sword-blade::-moz-progress-bar {
+  background-color: tomato;
+  border: 1px solid red;
+  box-shadow: 0 0 8px red;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.show-timer {
+  display: flex;
+}
+
+@media (min-width: 576px) {
+  .timer {
+    font-size: 1.2rem;
+  }
+  .sword-blade {
+    height: 8px;
+  }
+}
+
+@media (min-width: 768px) {
+  .sword-blade {
+    height: 10px;
+  }
+  .timer {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .sword-blade {
+    height: 12px;
+  }
+  .timer {
+    font-size: 1.5rem;
+  }
+}

@@ -172,6 +172,18 @@
   display: none;
 }
 
+.answer-correct {
+  color: var(--color-correct);
+}
+
+.answer-wrong {
+  color: var(--button-red-color);
+}
+
+.result-summary-text span {
+  font-weight: 700;
+}
+
 @media (min-width: 675px) {
   .modal-content {
     width: 60%;

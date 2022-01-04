@@ -1,12 +1,10 @@
-export const quizView = (answers, title) => {
+export const quizView = ({ question, answersArray, photo }) => {
   return `
-    <h1 class="content__header">${title}</h1>
-    
-    <div class="quiz-answer-container">
-      <button class="quiz-answer">${answers[0].name}</button>
-      <button class="quiz-answer">${answers[1].name}</button>
-      <button class="quiz-answer">${answers[2].name}</button>
-      <button class="quiz-answer">${answers[3].name}</button>
-    </div>
-`;
+    <div class="quiz">
+      <img class="quiz-photo" src="${photo}" alt=" zdjęcie postaci" />
+      <h1 class="quiz-question">${question}</h1>
+      <div class="quiz-answer-container">
+        ${answersArray.map((answer) => `<button class="quiz-answer">${answer}</button>`).join('\n')}
+      </div>
+    </div>`;
 };

@@ -1,3 +1,14 @@
+.quiz {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    'photo'
+    'question'
+    'answers';
+  gap: 2rem;
+  margin: 2rem;
+}
+
 .quiz-answer-container {
   place-self: center center;
   width: 100%;
@@ -10,16 +21,32 @@
 .quiz-answer {
   padding: 1.5rem;
   background-color: var(--color-white);
-  box-shadow: inset 0px 0px 55px -8px rgba(53, 63, 179, 1);
+  --box-shadow-color: rgb(53, 63, 179);
+  box-shadow: inset 0px 0px 55px -8px var(--box-shadow-color);
   border-radius: var(--primary-border-radius);
   border: none;
   font-size: 1.3rem;
   cursor: pointer;
-  transition: box-shadow 300ms;
+  transition: all 300ms;
 }
 
-.quiz-answer:hover {
-  box-shadow: inset 0px 0px 85px -8px rgb(53, 179, 74);
+@media (hover: hover) {
+  .quiz-answer:hover {
+    box-shadow: inset 0px 0px 75px -8px var(--box-shadow-color);
+  }
+}
+
+.quiz-answer-correct {
+  --box-shadow-color: rgb(53, 179, 74);
+}
+
+.quiz-answer-wrong {
+  --box-shadow-color: rgb(179, 53, 53);
+}
+
+.quiz-answer-correct,
+.quiz-answer-wrong {
+  box-shadow: inset 0px 0px 85px -8px var(--box-shadow-color);
 }
 
 .quiz-question {
