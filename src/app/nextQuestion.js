@@ -4,6 +4,8 @@ import { mode } from './mode';
 import { isCorrectAnswer } from './helpers/isCorrectAnswer';
 import { randomComputerAnswer } from './randomComputerAnswer';
 import { computerPlayer, humanPlayer } from './players';
+import { counterTemplate } from './templates/counterTimer.template';
+import { counterTimer } from './counterTimer';
 
 const playerAnswer = (player, answer, rightAnswer, question, photo) => {
   const isCorrect = isCorrectAnswer(answer, rightAnswer);
@@ -12,7 +14,11 @@ const playerAnswer = (player, answer, rightAnswer, question, photo) => {
   return isCorrect;
 };
 
+let shouldDisplaySword = true;
+
 export const nextQuestion = () => {
+  const countTimer = document.querySelector('.count-timer');
+
   const enterKeyframes = [
     { transform: 'translateX(-10%) scale(0.9)', opacity: '0' },
     { transform: 'translateX(0) scale(1)', opacity: '1' },
@@ -51,5 +57,10 @@ export const nextQuestion = () => {
       });
       button.question = question;
     });
+    if (shouldDisplaySword) {
+      countTimer.innerHTML = counterTemplate();
+      counterTimer();
+      shouldDisplaySword = false;
+    }
   });
 };
