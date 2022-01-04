@@ -7,9 +7,9 @@ import { computerPlayer, humanPlayer } from './players';
 import { counterTemplate } from './templates/counterTimer.template';
 import { counterTimer } from './counterTimer';
 
-const playerAnswer = (player, answer, rightAnswer, question) => {
+const playerAnswer = (player, answer, rightAnswer, question, photo) => {
   const isCorrect = isCorrectAnswer(answer, rightAnswer);
-  player.answerQuestion(answer, isCorrect);
+  player.answerQuestion(answer, rightAnswer, isCorrect, photo);
   player.askQuestion(question);
   return isCorrect;
 };
@@ -49,9 +49,10 @@ export const nextQuestion = () => {
     document.querySelector('.quiz').animate(enterKeyframes, animationOptions);
     document.querySelectorAll('button.quiz-answer').forEach((button) => {
       button.addEventListener('click', (e) => {
-        const isCorrect = playerAnswer(humanPlayer, e.target.innerText, rightAnswer, question);
+        document.querySelectorAll('button.quiz-answer').forEach((button) => (button.disabled = true));
+        const isCorrect = playerAnswer(humanPlayer, e.target.innerText, rightAnswer, question, photo);
         e.target.classList.add(isCorrect ? 'quiz-answer-correct' : 'quiz-answer-wrong');
-        playerAnswer(computerPlayer, randomComputerAnswer(answersArray), rightAnswer, question);
+        playerAnswer(computerPlayer, randomComputerAnswer(answersArray), rightAnswer, question, photo);
         setTimeout(nextQuestion, 1000);
       });
       button.question = question;
