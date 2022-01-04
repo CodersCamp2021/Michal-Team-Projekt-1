@@ -43,6 +43,7 @@ export const nextQuestion = () => {
     document.querySelector('.quiz').animate(enterKeyframes, animationOptions);
     document.querySelectorAll('button.quiz-answer').forEach((button) => {
       button.addEventListener('click', (e) => {
+        document.querySelectorAll('button.quiz-answer').forEach((button) => (button.disabled = true));
         const isCorrect = playerAnswer(humanPlayer, e.target.innerText, rightAnswer, question, photo);
         e.target.classList.add(isCorrect ? 'quiz-answer-correct' : 'quiz-answer-wrong');
         playerAnswer(computerPlayer, randomComputerAnswer(answersArray), rightAnswer, question, photo);
