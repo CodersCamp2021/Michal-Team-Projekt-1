@@ -11,7 +11,6 @@ export const renderResultsModal = ({ humanPlayer, computerPlayer }) => {
     'afterend',
     resultsModalView({
       playerData,
-      correctAnswers,
       computerData,
     }),
   );
