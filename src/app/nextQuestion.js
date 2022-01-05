@@ -47,6 +47,7 @@ export const nextQuestion = () => {
     const answersArray = answers.map(({ name }) => name);
     document.querySelector('main').innerHTML = quizView({ question, answersArray, photo });
     document.querySelector('.quiz').animate(enterKeyframes, animationOptions);
+    document.querySelectorAll('.mode-btn').forEach((button) => (button.disabled = true));
     document.querySelectorAll('button.quiz-answer').forEach((button) => {
       button.addEventListener('click', (e) => {
         document.querySelectorAll('button.quiz-answer').forEach((button) => (button.disabled = true));
