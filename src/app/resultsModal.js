@@ -23,6 +23,7 @@ export const renderResultsModal = ({ humanPlayer, computerPlayer }) => {
 export const hideGameModal = () => {
   const modal = document.querySelector('.modal-overlay');
   modal.classList.remove('active');
+  window.location.reload();
 };
 
 export const handleSubmit = (e) => {
@@ -35,4 +36,5 @@ export const handleSubmit = (e) => {
     maxScore,
   };
   if (playerName) addScoreToRanking(mode.getMode(), result);
+  hideGameModal();
 };
