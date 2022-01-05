@@ -120,6 +120,7 @@
   }
   .quiz-photo {
     max-width: 28rem;
+    max-height: 28rem;
   }
 }
 
