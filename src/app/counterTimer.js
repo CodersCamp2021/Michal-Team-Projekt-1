@@ -1,4 +1,5 @@
 import { renderResultsModal } from './resultsModal';
+import { humanPlayer, computerPlayer } from './players';
 
 const showTimer = (time) => {
   const timer = document.querySelector('.timer');
@@ -8,15 +9,12 @@ const showTimer = (time) => {
 };
 
 export const counterTimer = () => {
-  // Current time + 2 minutes
   const time = Date.now() + 120 * 1000;
   const countTime = setInterval(() => {
     const timeLeft = time - Date.now();
-    if (timeLeft < 0) {
+    if (timeLeft < 1000) {
       clearInterval(countTime);
-      //TODO: DODAĆ WYŚWIETLANIE MODALA PO ZAKONCZENIU GRY
-      const modal = document.querySelector('.modal-shadow');
-      modal.classList.add('active');
+      renderResultsModal({ humanPlayer, computerPlayer });
     }
     showTimer(timeLeft);
   }, 500);
