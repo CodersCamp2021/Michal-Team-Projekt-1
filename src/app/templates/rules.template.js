@@ -20,15 +20,13 @@ export const rulesView = ({ title, content, imageSrc }) => {
             ${content}
           </p>
         </div>
-      </div>
-
-      <div class="content__buttons">
-        <button class="button">Settings</button>
-        <button class="button button--ranking"><img src="${new URL(
-          '../../../static/assets/ui/icon-stats.svg',
-          import.meta.url,
-        )}" alt='' /> Hall of fame</button>
-        <button class="button button--action">Play the game</button>
+        <div class="content__buttons">
+          <button class="button button--ranking"><img src="${new URL(
+            '../../../static/assets/ui/icon-stats.svg',
+            import.meta.url,
+          )}" alt='' /> Hall of fame</button>
+          <button class="button button--action">Play the game</button>
+        </div>
       </div>
     </div>`;
 };
