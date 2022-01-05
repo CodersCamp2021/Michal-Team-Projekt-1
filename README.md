@@ -6,7 +6,7 @@
 # Zespół
 
 - **Mentor: [Michał Miszczyszyn](https://github.com/mmiszy)**
-<!-- Dodaj linki -->
+
 - [Justyna Bodurka](https://github.com/justyna-bodurka)
 - [Weronika Burzyńska](https://github.com/Weroniika)
 - [Mateusz Binięda](https://github.com/Arssin)
@@ -22,8 +22,6 @@
 # Star Wars Quiz
 
 ## Demo
-
-<!-- dodać link -->
 
 Wersja demonstracyjna aplikacji jest dostępna pod tym linkiem -> [DEMO](https://sturdy-journey-761820ff.pages.github.io/) <br/> <br/>
 
@@ -46,11 +44,11 @@ Niezwykle ważnym aspektem podczas projektu, była styczność ze wspólnym twor
 
 ## `Ekran główny` <br/>
 
-![main1](https://user-images.githubusercontent.com/93389452/148151348-18a2130c-9815-4b86-842f-7407be361046.png)<br/><br/>
+![main 2](https://user-images.githubusercontent.com/93389452/148229882-73655d35-2d67-43ae-9b85-e9ef0d9a2a3c.png)<br/><br/>
 
 ## `Responsywność` <br/>
 
-![responsive](https://user-images.githubusercontent.com/93389452/148149779-73274f24-7f84-4c17-88fd-570a52652b1e.png)<br/><br/>
+![responsive 1](https://user-images.githubusercontent.com/93389452/148229994-5b59c229-7fe9-4235-9079-1043f9b0e7d9.png)<br/><br/>
 
 ## `Przykładowy gameplay` <br/>
 
@@ -78,7 +76,7 @@ Jest odzwierciedleniem ekranu, który pokazuje najlepsze zdobyte wyniki, które 
 
 ## Rozgrywka
 
-Polega na rozpoznawaniu przez gracza w zależności od trybu - postaci, pojazdów lub statków kosmicznych. Przy rozpoczęciu quizu po lewej stronie wyświetlane, jest losowo wygenerowane zdjęcie ze SWAPI. Zadanie polega na rozpoznaniu nazwy ukazanej postaci fikcyjnej, bądź rzeczy. Gracz udziela jednej z czterech odpowiedzi, po czym przechodzi do następnego pytania. W każdym pytaniu tylko jedna z opcji jest prawidłowa. Poprawna odpowiedź podświetla przycisk na zielono a błędna - na czerwono. Quizz trwa 2 minuty. Czas wyświetlany jest w formie liczbowej, oraz poprzez animowany miecz świetlny na dole ekranu. Po zakończeniu rozgrywki, gracz uzyskuje wynik porównany z wynikiem grającego jednocześnie komputera. Wyświetlana jest wtedy ilość pytań oraz poprawnych odpowiedzi. Istnieje również możliwość dopisania się do rankingu poprzez wprowadzenie nazwy.
+Polega na rozpoznawaniu przez gracza w zależności od trybu - postaci, pojazdów lub statków kosmicznych. Przy rozpoczęciu quizu po lewej stronie wyświetlane, jest losowo wygenerowane zdjęcie ze SWAPI. Zadanie polega na rozpoznaniu nazwy ukazanej postaci fikcyjnej, bądź rzeczy. Gracz udziela jednej z czterech odpowiedzi, po czym przechodzi do następnego pytania. W każdym pytaniu tylko jedna z opcji jest prawidłowa. Poprawna odpowiedź podświetla przycisk na zielono a błędna - na czerwono. Quiz trwa 2 minuty. Czas wyświetlany jest w formie liczbowej, oraz poprzez animowany miecz świetlny na dole ekranu. Po zakończeniu rozgrywki, gracz uzyskuje wynik porównany z wynikiem grającego jednocześnie komputera. Wyświetlana jest wtedy ilość pytań oraz poprawnych odpowiedzi. Istnieje również możliwość dopisania się do rankingu poprzez wprowadzenie nazwy.
 
 # Uruchomienie projektu
 
